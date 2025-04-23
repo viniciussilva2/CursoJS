@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Nacionalidade</title>
+  </head>
+  <body>
+    <h1>QUAL É A SUA NACIONALIDADE? DESCUBRA A HISTÓRIA DO SEU PAIS.</h1>
+    Você é Brasileiro ou Argentino?
+    <input type="text" name="nacionalidadeUsuario" id="nacionalidadeUsuario" />
+    <button onclick="verificarNacionalidade()">Verificar</button>
+
+    <div id="nacionalidade"></div>
+
+    <script>
+      function verificarNacionalidade() {
+        var nacionalidadeUsuario = document
+          .getElementById("nacionalidadeUsuario")
+          .value.trim();
+        var resultado = document.getElementById("nacionalidade");
+
+        if (nacionalidadeUsuario.toLowerCase() === "brasileiro") {
+          resultado.innerHTML =
+            "<p>Você é Brasileiro. O Brasil é um país vasto e diverso, com uma história marcada pela colonização portuguesa, a independência em 1822, e uma forte influência cultural da África e Europa. Hoje, o Brasil é conhecido mundialmente pelo seu futebol, música e o carnaval.</p>";
+        } else if (nacionalidadeUsuario.toLowerCase() === "argentino") {
+          resultado.innerHTML =
+            "<p>Você é Argentino. A Argentina tem uma rica história, com destaque para sua independência em 1816, as guerras civis internas e a imigração europeia no século XIX. O país é famoso pelo tango, o futebol, e pela paixão de seu povo.</p>";
+        } else {
+          resultado.innerHTML =
+            "<p>Não reconhecemos essa nacionalidade. Por favor, insira 'brasileiro' ou 'argentino'.</p>";
+        }
+      }
+    </script>
+  </body>
+</html>

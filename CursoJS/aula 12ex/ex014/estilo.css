@@ -1,0 +1,40 @@
+body {
+  background: rgb(95, 95, 235);
+  font: normal 15pt Arial;
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Centraliza o conteúdo da seção */
+section {
+  display: flex;
+  flex-direction: column; /* Organiza as divs em uma coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  height: 50vh; /* Garante que a seção ocupe a altura total da tela */
+  text-align: center; /* Centraliza o texto dentro das divs */
+}
+
+/* Estilo para a imagem */
+#imagem img {
+  width: 300px;
+  height: auto;
+}
